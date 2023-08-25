@@ -1,0 +1,6 @@
+select p.patient_id,p.patient_name ,p.conditions
+from Patients p
+inner join (SELECT  patient_id, value 
+FROM Patients 
+cross apply string_split(conditions,' ')
+WHERE value LIKE 'DIAB1%') c on c.patient_id=p.patient_id
