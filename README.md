@@ -18,4 +18,4 @@ WHERE value LIKE 'DIAB1%') c on c.patient_id=p.patient_id
   ```sql
   select * from Patients
   where conditions like 'DIAB1%' OR conditions like  '% DIAB1%'
-```
+
